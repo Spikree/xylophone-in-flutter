@@ -12,18 +12,33 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 
+  void buildButton() {
+    Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: Colors.red,
+        ),
+        onPressed: () {
+          playsound(1);
+        },
+        child: Text(
+          'click me',
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.red,
                   ),
@@ -31,10 +46,12 @@ class XylophoneApp extends StatelessWidget {
                     playsound(1);
                   },
                   child: Text(
-                    'Click me',
+                    'click me',
                   ),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.orange,
                   ),
@@ -43,7 +60,9 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.yellow,
                   ),
@@ -52,7 +71,9 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
                   ),
@@ -61,7 +82,9 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green.shade900,
                   ),
@@ -70,7 +93,9 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.blue,
                   ),
@@ -79,7 +104,9 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.purple,
                   ),
@@ -88,10 +115,10 @@ class XylophoneApp extends StatelessWidget {
                   },
                   child: Text('Click me'),
                 ),
-              ],
-            ),
-          ],
-        )),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
